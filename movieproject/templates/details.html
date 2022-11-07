@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block body %}
+<br>
+<div class="media">
+  <img class="mr-3" src="{{movie.img.url}}" height="444" width="300"">
+  <div class="media-body">
+    <h5 class="mt-0">{{movie.name}} ({{movie.year}})</h5>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{movie.desc}}<br>
+    <a class="btn btn-warning" href="{% url 'movieapp:update' movie.id %}"> update </a>
+    <a class="btn btn-danger" href="{% url 'movieapp:delete' movie.id %}"> DELETE </a>
+  </div>
+</div>
+{% endblock %}
+
